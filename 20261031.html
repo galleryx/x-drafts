@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F5F7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Gallery X 초안함</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F3F5F7;--panel:#FFFFFF;--ink:#171A1F;--muted:#5F6B7A;--line:#DCE1E7;--accent:#0E5E8A;--accent-ink:#FFFFFF;--soft:#E8F0F6;color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1216;--panel:#171B21;--ink:#ECEFF3;--muted:#98A3B1;--line:#2A313A;--accent:#5FB0E0;--accent-ink:#0B1218;--soft:#1E2A34}}
+:root[data-theme="dark"]{--bg:#0F1216;--panel:#171B21;--ink:#ECEFF3;--muted:#98A3B1;--line:#2A313A;--accent:#5FB0E0;--accent-ink:#0B1218;--soft:#1E2A34}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px calc(40px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+h1{font-size:1.5rem;margin:0;font-weight:700;letter-spacing:-.01em}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.top .date{font-family:"IBM Plex Mono",monospace;font-size:.9rem;color:var(--muted)}
+.howto{font-size:1rem;color:var(--muted);margin:0 0 20px;line-height:1.6}
+.draft{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:18px}
+.draft header{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.topic{font-family:"IBM Plex Mono",monospace;font-size:.85rem;letter-spacing:.06em;color:var(--accent)}
+.when{font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--muted)}
+.draft h2{font-size:1.28rem;margin:0;font-weight:700;text-wrap:balance;line-height:1.35}
+.msg{margin:0;font-size:1.05rem;color:var(--muted)}
+.quote{font-size:.95rem;color:var(--muted);margin:0 0 10px;word-break:break-all}
+.quote a{color:var(--accent)}
+.quote span{font-size:.9rem}
+.body{white-space:pre-wrap;word-break:keep-all;overflow-wrap:anywhere;font:inherit;font-size:1.12rem;line-height:1.75;background:var(--soft);border-radius:10px;padding:16px;margin:0;color:var(--ink);user-select:all;-webkit-user-select:all}
+.meta{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--muted);margin:8px 2px 12px;font-variant-numeric:tabular-nums}
+.actions{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.btn{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:1.05rem;font-weight:600;padding:14px 16px;border-radius:10px;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;min-height:48px;width:100%;-webkit-tap-highlight-color:transparent}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.done{border-color:var(--accent);color:var(--accent)}
+.images{display:grid;grid-template-columns:1fr;gap:12px}
+figure{margin:0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}
+figcaption{font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--muted);margin-top:6px}
+.foot{font-size:.95rem;color:var(--muted);margin-top:8px}
+@media (min-width:640px){
+  body{font-size:16px}
+  .body{font-size:1.05rem}
+  .actions{flex-direction:row}
+  .btn{width:auto;min-width:140px}
+  .images{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><h1>Gallery X 초안함</h1><span class="date">2026-10-31 05:00</span></div>
+  <p class="howto">폰에서 열면 됨. <b>X에서 열기</b>를 누르면 X 앱 작성창에 본문이 채워져서 뜨고, 이미지는 아래 그림을 길게 눌러 저장한 뒤 작성창에서 붙이면 됨. 인용RT 표시가 있는 글은 원글 링크가 같이 들어감. 게시를 누르는 건 본인이라 출처가 "Twitter for iPhone"으로 남음.</p>
+  <p class="howto">대기 중인 초안 없음.</p>
+  <p class="foot">대기 초안 0건 · 최근 3일. 올린 글은 URL만 텔레그램으로 보내주면 기록하고 목록에서 뺌.</p>
+</div>
+<script>
+function val(id){const e=document.getElementById(id);return (e.value!==undefined?e.value:e.textContent)}
+function upd(){document.querySelectorAll('.count').forEach(c=>{c.textContent=val(c.dataset.for).length+'자';});}
+upd();
+document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',e=>{const t=val(a.dataset.open);let u='https://x.com/intent/post?text='+encodeURIComponent(t);if(a.dataset.quote)u+='&url='+encodeURIComponent(a.dataset.quote);a.href=u;}));
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const t=val(b.dataset.copy);try{await navigator.clipboard.writeText(t);b.textContent='복사됨';b.classList.add('done');setTimeout(()=>{b.textContent='본문 복사';b.classList.remove('done')},1800);}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.copy));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='선택됨, 길게 눌러 복사';}}));
+</script>
+</body>
+</html>
